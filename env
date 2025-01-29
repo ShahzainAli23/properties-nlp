@@ -1,0 +1,8 @@
+api_key = 8G7mv91FyF2bGnEi5jO0CFh5zY4Ob2hnBsnNX32IXFw0wdo9z1dyJQQJ99AKACYeBjFXJ3w3AAABACOGoj..
+api_version = 2024-08-01-preview
+api_endpoint = https://afoua-m3fm3fyj-eastus.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview
+host = # 127.0.0.1 (enter your own host ip here)
+user = # root (enter your own username here)
+password = # 26937 (enter your own password here)
+database_name = # propertydb (enter your own database name here)
+table_name = # properties (enter your own table name here)
