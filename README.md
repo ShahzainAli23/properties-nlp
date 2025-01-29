@@ -9,28 +9,29 @@ To run this project, you will need:
 - Python 3.x
 - A MySQL database
 
-### Python Libraries:
-Ensure you have the following libraries installed:
+## Libraries Needed
 
-- `openai`
-- `mysql-connector-python`
-- `python-dotenv`
+To run this project, you'll need to install the following Python libraries:
 
-You can install these dependencies using pip:
+- `streamlit` – For building the web app.
+- `openai` – For interacting with the GPT model (used via Azure in this case).
+- `mysql-connector-python` – To interact with the MySQL database.
+- `python-dotenv` – For loading environment variables from a `.env` file.
+- `pandas` – For working with the data and displaying it in tabular form.
+- `os` – For accessing system-level environment variables.
+
+## Installation
+
+You can install all required libraries using `pip`:
 
 ```bash
-pip install openai mysql-connector-python python-dotenv
-```
+pip install streamlit openai mysql-connector-python python-dotenv pandas
 
 ## Setup
 
 ### 1. Environment Variables
 
-Create a `.env` file in the root directory of the project and replace the dummy values with your actual credentials.
-
-```bash
-# API Key for OpenAI access (replace with your actual API key)
-api_key = your_openai_api_key_here
+Edit the `.env` file in the root directory of the project and replace the dummy values with your actual credentials.
 
 # Host address for the MySQL database connection (replace with actual host)
 host = your_database_host_here
@@ -43,6 +44,9 @@ password = your_database_password_here
 
 # Name of the database to use for queries (replace with actual database name)
 database_name = your_database_name_here
+
+# Name of the table in the database (keep the name as 'properties')
+table_name = your_table_name_here
 ```
 
 ### 2. Database Setup
@@ -59,7 +63,7 @@ You can use the `.sql` file to set up your database schema and import the data.
 Once the setup is complete, you can run the application:
 
 ```bash
-python app.py
+streamlit run app.py
 ```
 
 The program will prompt you to input a search query. Based on your input, it will generate an SQL query using OpenAI's GPT model, execute the query against the MySQL database, and display the results.
